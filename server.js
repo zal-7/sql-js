@@ -31,7 +31,7 @@ app.get("/api/notes", function(err, res) {
   res.json(notesData);
 });
 
-app.post("/routes/apiRoutes.js", function(req, res) {
+app.post("/api/notes", function(req, res) {
   try {
 
     notesData = fs.readFileSync("./Develop/db/db.json", "utf8");
@@ -93,7 +93,7 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "Develop/public/index.html"));
 });
 
-app.get("/routes/apiRoute.js", function(req, res) {
+app.get("/api/notes", function(req, res) {
   return res.sendFile(path.json(__dirname, "Develop/db/db.json"));
 });
 
